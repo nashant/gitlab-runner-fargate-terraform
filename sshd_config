@@ -1,0 +1,6 @@
+PasswordAuthentication no
+PermitUserEnvironment yes
+AcceptEnv LANG LC_* CI_*
+SyslogFacility AUTH
+LogLevel VERBOSE
+AllowUsers root
