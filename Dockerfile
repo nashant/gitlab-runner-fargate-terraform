@@ -5,7 +5,9 @@ ARG TERRAFORM_VERSION=0.12.29
 ARG TINI_VERSION=v0.19.0
 
 RUN apk add --no-cache --virtual builddeps curl unzip && \
-    apk add --no-cache git-lfs openssh jq aws-cli && \
+    apk add --no-cache git-lfs openssh jq python3 py3-pip && \
+    pip install awscli && \
+    aws --version && \
     git lfs install --skip-repo && \
     curl -Lo /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/${GITLAB_RUNNER_VERSION}/binaries/gitlab-runner-linux-amd64 && \
     chmod +x /usr/local/bin/gitlab-runner && \
