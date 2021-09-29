@@ -1,7 +1,7 @@
 FROM alpine:3
 
 ARG GITLAB_RUNNER_VERSION=latest
-ARG TERRAFORM_VERSION=0.12.29
+ARG TERRAFORM_VERSION=0.12.30
 ARG TINI_VERSION=v0.19.0
 
 RUN apk add --no-cache --virtual builddeps curl unzip && \
